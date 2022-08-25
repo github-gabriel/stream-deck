@@ -1,6 +1,8 @@
 # Stream Deck
 
-<img src="https://github.com/github-gabriel/stream-deck/blob/main/src/logo.png" width="240" align="center">
+<p align="center">
+  <img src="https://github.com/github-gabriel/stream-deck/blob/main/src/logo.png" width="240">
+</p>
 
 Das Stream Deck nutzt das Keypad für den Arduino und Python um die gedrückten Tasten des Keypads auszulesen und entsprechende, über die GUI zugewiesene, Befehle auszuführen. Bisher kann eine Taste entweder eine .exe Datei ausführen oder eine Website in einem Webbrowser öffnen. Die Befehle werden in ```stream_deck_commands.json``` gespeichert. Zuerst wurden die Befehle nur im Value des Dictionaries gespeichert, doch mein Freund [xImAnton](https://github.com/xImAnton) kam auf die Idee nested Dictionaries zu nutzen (und hat mir geholfen, das Projekt besser zu strukturieren), damit man weniger "String-Funktionen"(replace, strip, "in-Keyword" etc.) benutzen muss und Mode + Argument einfach getrennt abfragen kann. Außerdem hat die Applikation ein System Tray Icon, womit man die GUI öffnen/ schließen kann ("Stream Deck" funktioniert aber noch!) und das Programm komplett beenden kann.
 
