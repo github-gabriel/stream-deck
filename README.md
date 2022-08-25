@@ -14,3 +14,13 @@ Das Stream Deck nutzt das Keypad für den Arduino und Python um die gedrückten 
 ### 2. Lasst [das Keypad Programm](https://github.com/github-gabriel/stream-deck/blob/main/Keypad.ino) auf dem Arduino laufen. Jetzt werden die einzelnen Knopfdrücke auf dem Serial Monitor ausgegeben.
 
 ### 3. Jetzt müsst ihr euch nur noch [den src Ordner](https://github.com/github-gabriel/stream-deck/tree/main/src) downloaden und ```stream_deck.py``` ausführen.
+
+## Hier ist ein Video des Stream Decks im Einsatz:
+
+https://user-images.githubusercontent.com/92476790/186717906-ddacd371-1439-464d-8bb9-7d9cf504cac9.mp4
+
+## Hier ist ein Video des Programmes im Einsatz:
+
+https://user-images.githubusercontent.com/92476790/186717956-35ac79fa-c26e-4f12-9e7c-8e7bb1d531d7.mp4
+
+
