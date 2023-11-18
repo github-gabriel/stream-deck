@@ -22,6 +22,11 @@ In ```src``` Folder navigieren
 cd .\stream-deck\src\
 ```
 
+In [```stream_deck.py```](https://github.com/github-gabriel/stream-deck/blob/main/src/stream_deck.py) den korrekten Port als ```ARDUINO_PORT``` setzen 
+```py
+ARDUINO_PORT = 'COM9'
+```
+
 ```stream_deck.py``` starten
 ```
 python .\stream_deck.py
