@@ -10,19 +10,21 @@ from PyQt5 import uic, QtGui, QtCore
 from PyQt5.QtWidgets import *
 
 
-APP_ICON = PIL.Image.open(r"D:\Windows\Desktop\pycharm\scripts\stream_deck\logo.png")
+APP_ICON = PIL.Image.open(r"logo.png")
 COMBO_BOX_ITEMS = {"execute .exe file": "exe", "open webbrowser": "wb"}
+
+ARDUINO_PORT = 'COM3'
 
 
 def read_commands():
-    with open(r'D:\Windows\Desktop\pycharm\scripts\stream_deck\stream_deck_commands.json') as file:
+    with open(r'stream_deck_commands.json') as file:
         data = file.read()
     js = json.loads(data)
     return js
 
 
 def write_commands(commands):
-    with open(r'D:\Windows\Desktop\pycharm\scripts\stream_deck\stream_deck_commands.json', 'w') as file:
+    with open(r'stream_deck_commands.json', 'w') as file:
         json.dump(commands, file)
 
 
@@ -39,15 +41,19 @@ class StreamDeckApplication:
     def __init__(self):
         self.commands = read_commands()
 
-        # https://www.pythonpool.com/python-serial-read/
-        self.serial = serial.Serial(
-            port='COM3',
-            baudrate=9600,
-            parity=serial.PARITY_NONE,
-            stopbits=serial.STOPBITS_ONE,
-            bytesize=serial.EIGHTBITS,
-            timeout=1
-        )
+        try:
+            # https://www.pythonpool.com/python-serial-read/
+            self.serial = serial.Serial(
+                port=ARDUINO_PORT,
+                baudrate=9600,
+                parity=serial.PARITY_NONE,
+                stopbits=serial.STOPBITS_ONE,
+                bytesize=serial.EIGHTBITS,
+                timeout=1
+            )
+        except:
+            print(f"Couldn't connect to Arduino on {ARDUINO_PORT}!")
+
 
         self.icon = pystray.Icon("Logo", APP_ICON, menu=pystray.Menu(
             pystray.MenuItem("GUI", pystray.Menu(
@@ -112,7 +118,7 @@ class StreamDeckWindow(QMainWindow):
     def __init__(self, app):
         super(StreamDeckWindow, self).__init__()
 
-        uic.loadUi(r"D:\Windows\Desktop\pycharm\scripts\stream_deck\stream_deck.ui", self)
+        uic.loadUi(r"stream_deck.ui", self)
         self.app = app
         self.show()
         self.rows = QVBoxLayout(self.mainLayout)
