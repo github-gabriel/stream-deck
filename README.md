@@ -10,7 +10,7 @@ Das Stream Deck nutzt das Keypad für den Arduino und Python um die gedrückten 
 
 1. [Keypad.ino](https://github.com/github-gabriel/stream-deck/blob/main/Keypad.ino) auf dem Arduino ausführen lassen.
 
-2. [Src Ordner](https://github.com/github-gabriel/stream-deck/tree/main/src) downloaden und ```stream_deck.py``` ausführen.
+2. Projekt downloaden und ```stream_deck.py``` ausführen.
 
 Projekt klonen
 ```
