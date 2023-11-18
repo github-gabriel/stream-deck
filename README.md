@@ -17,12 +17,12 @@ Projekt klonen
 git clone https://github.com/github-gabriel/stream-deck
 ```
 
-In src Folder navigieren
+In ```src``` Folder navigieren
 ```
 cd .\stream-deck\src\
 ```
 
-Programm starten
+```stream_deck.py``` starten
 ```
 python .\stream_deck.py
 ```
